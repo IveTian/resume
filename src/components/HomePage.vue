@@ -66,7 +66,7 @@
                   href="https://cheers.bio/0xB38E7cFf2B47e8374c0F253527ddDA660Cb4A9F0"
                   target="_blank"
                 >
-                  前往 Cheers.Bio
+                  {{ $t("cheersBio") }}
                 </el-link>
               </p>
             </div>
