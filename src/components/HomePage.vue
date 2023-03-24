@@ -32,14 +32,12 @@
           ><i class="el-icon-collection-tag"></i>{{ $t("tagName") }}</el-divider
         >
         <div style="text-align: center">
-          <el-tag type="info" style="margin-top: 5px">LGBT 🌈</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag1") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag2") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag3") }}</el-tag>
-          <el-tag type="info" style="margin-top: 5px">{{ $t("tag4") }}</el-tag>
-          <el-tag type="info" style="margin-top: 5px">Gamer</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag5") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag6") }}</el-tag>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag7") }}</el-tag>
         </div>
       </div>
     </div>
@@ -50,7 +48,43 @@
             <div id="titleText">
               <p>{{ $t("myWorks") }}</p>
             </div>
-            <p>{{ $t("myWorksText") }}</p>
+            <el-link
+                  type="primary"
+                  :underline="false"
+                  href="https://www.figma.com/community/file/1189928298370727537/MIUI-UI-Design-System-(Community)"
+                  target="_blank"
+                  style="word-break: break-all;"
+                >
+                {{ $t("myWork1") }}
+                </el-link>
+                <el-link
+                  type="primary"
+                  :underline="false"
+                  href="https://js.design/community?category=detail&type=resource&id=6226ccdcc09b33929cf67408"
+                  target="_blank"
+                  style="margin-top: 5px;word-break: break-all;"
+                >
+                {{ $t("myWork2") }}
+                </el-link>
+                <el-link
+                  type="primary"
+                  :underline="false"
+                  href="https://api-serv.tzih.top/me/%E7%94%B0%E6%A2%93%E8%A1%A1-%E7%A4%BE%E5%9B%A2%E8%81%94%E5%90%88%E4%BC%9ALOGO%E8%AE%BE%E8%AE%A1.pdf"
+                  target="_blank"
+                  style="margin-top: 5px;word-break: break-all;"
+                >
+                {{ $t("myWork3") }}
+                </el-link>
+                <br />
+                <el-link
+                  type="primary"
+                  :underline="false"
+                  href="https://inlushan.top"
+                  target="_blank"
+                  style="margin-top: 5px;word-break: break-all;"
+                >
+                {{ $t("myWork4") }}
+                </el-link>
           </div>
         </el-col>
         <el-col :span="11" :offset="2">
@@ -63,7 +97,7 @@
                 <el-link
                   type="primary"
                   :underline="false"
-                  href="https://cheers.bio/0xB38E7cFf2B47e8374c0F253527ddDA660Cb4A9F0"
+                  href="https://hoot.it/search/0xB38E7cFf2B47e8374c0F253527ddDA660Cb4A9F0"
                   target="_blank"
                 >
                   {{ $t("cheersBio") }}
@@ -84,7 +118,7 @@
         </p>
       </div>
     </div>
-    <div id="container">
+    <!-- <div id="container">
       <div id="titleText">
         <p>{{ $t("socialAccounts") }}</p>
       </div>
@@ -145,8 +179,16 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="footer">
+      <el-link
+                  type="primary"
+                  :underline="false"
+                  href="mailto:ivetien@outlook.com"
+                  target="_blank"
+                >
+                {{ $t("sendEmail") }}
+                </el-link>
       <p style="font-weight: 800">{{ $t("footerText") }}</p>
       <el-link
         type="info"
@@ -187,6 +229,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 p {
   font-family: "Poppins", sans-serif;
 }
@@ -210,6 +253,7 @@ h1,
 h2 {
   font-weight: normal;
 }
+
 #changeLangBtn {
   top: 20px;
   right: 20px;
@@ -231,6 +275,9 @@ h2 {
   margin-top: 220px;
   max-width: 650px;
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 #firstContainer {
   background-color: #ffffff;
