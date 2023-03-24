@@ -38,6 +38,7 @@
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag5") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag6") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag7") }}</el-tag>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag8") }}</el-tag>
         </div>
       </div>
     </div>
