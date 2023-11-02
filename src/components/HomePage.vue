@@ -1,18 +1,19 @@
 <template>
   <div class="hello">
-    <div id="changeLangBtn">
-      <el-link :underline="false" target="_blank" @click="changeLang"
-        ><span class="iconfont">&#xe8a9;</span></el-link
-      >
-    </div>
     <div id="mainContainer">
       <div id="mainTitleText">
         <p>{{ $t("helloWord") }}</p>
       </div>
     </div>
+    <div class="btnArea">
+      <!-- <div class="homeBtn" @click="downloadResume">{{ $t("resume") }}</div> -->
+      <div class="homeBtn" @click="goPortfolio">{{ $t("portfolioOnline") }}</div>
+      <div class="homeBtn" @click="downloadPortfolio">{{ $t("portfolioDownload") }}</div>
+      <div class="homeBtn" @click="changeLang"><span class="iconfont">&#xe8a9;</span></div>
+    </div>
     <div id="firstContainer">
       <div id="mainText">
-        <p>{{ $t("para1") }}</p>
+        <p style="font-weight: 600;">{{ $t("para1") }}</p>
         <p>{{ $t("para2") }}</p>
         <p>{{ $t("para3") }}</p>
         <p>{{ $t("para4") }}</p>
@@ -26,179 +27,52 @@
         <p>{{ $t("personInfo1") }}</p>
         <p style="margin-top: -15px">{{ $t("personInfo2") }}</p>
         <p style="margin-top: -15px">{{ $t("personInfo5") }}</p>
-        <p style="margin-top: -15px">{{ $t("personInfo3") }}</p>
-        <p style="margin-top: -15px">{{ $t("personInfo4") }}</p>
+        <p style="margin-top: -15px">{{ $t("personInfo7") }}</p>
+        <p style="margin-top: -15px; font-weight: 600;">{{ $t("personInfo8") }}</p>
         <el-divider
-          ><i class="el-icon-collection-tag"></i>{{ $t("tagName") }}</el-divider
+          ><i class="el-icon-phone"></i>{{ $t("tagName") }}</el-divider
         >
-        <div style="text-align: center">
-          <el-tag type="info" style="margin-top: 5px">{{ $t("tag1") }}</el-tag>
+        <p style="margin-top: 15px">{{ $t("personInfo3") }}</p>
+        <p style="margin-top: -15px">{{ $t("personInfo4") }}</p>
+        <p style="margin-top: -15px">{{ $t("personInfo6") }}</p>
+      </div>
+    </div>
+    <div id="twoCard">
+          <div id="smallContainer1">
+            <div id="titleText">
+              <p>{{ $t("tools") }}</p>
+            </div>
+            <div class="softwareUsedBlock" style="margin-top: -15px;">
+              <el-tag type="info" style="margin-top: 5px">{{ $t("tag1") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag2") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag3") }}</el-tag>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag4") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag5") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag6") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag7") }}</el-tag>
           <el-tag type="info" style="margin-top: 5px">{{ $t("tag8") }}</el-tag>
-        </div>
-      </div>
-    </div>
-    <div id="twoCard">
-      <el-row>
-        <el-col :span="11">
-          <div id="smallContainer">
-            <div id="titleText">
-              <p>{{ $t("myWorks") }}</p>
-            </div>
-            <el-link
-                  type="primary"
-                  :underline="false"
-                  href="https://www.figma.com/community/file/1189928298370727537/MIUI-UI-Design-System-(Community)"
-                  target="_blank"
-                  style="word-break: break-all;"
-                >
-                {{ $t("myWork1") }}
-                </el-link>
-                <el-link
-                  type="primary"
-                  :underline="false"
-                  href="https://js.design/community?category=detail&type=resource&id=6226ccdcc09b33929cf67408"
-                  target="_blank"
-                  style="margin-top: 5px;word-break: break-all;"
-                >
-                {{ $t("myWork2") }}
-                </el-link>
-                <el-link
-                  type="primary"
-                  :underline="false"
-                  href="https://api-serv.tzih.top/me/%E7%94%B0%E6%A2%93%E8%A1%A1-%E7%A4%BE%E5%9B%A2%E8%81%94%E5%90%88%E4%BC%9ALOGO%E8%AE%BE%E8%AE%A1.pdf"
-                  target="_blank"
-                  style="margin-top: 5px;word-break: break-all;"
-                >
-                {{ $t("myWork3") }}
-                </el-link>
-                <br />
-                <el-link
-                  type="primary"
-                  :underline="false"
-                  href="https://inlushan.top"
-                  target="_blank"
-                  style="margin-top: 5px;word-break: break-all;"
-                >
-                {{ $t("myWork4") }}
-                </el-link>
-          </div>
-        </el-col>
-        <el-col :span="11" :offset="2">
-          <div id="smallContainer">
-            <div id="titleText">
-              <p>{{ $t("myWeb3") }}</p>
-            </div>
-            <div>
-              <p>
-                <el-link
-                  type="primary"
-                  :underline="false"
-                  href="https://hoot.it/search/0xB38E7cFf2B47e8374c0F253527ddDA660Cb4A9F0"
-                  target="_blank"
-                >
-                  {{ $t("cheersBio") }}
-                </el-link>
-              </p>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag9") }}</el-tag>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag10") }}</el-tag>
+          <el-tag type="info" style="margin-top: 5px">{{ $t("tag11") }}</el-tag>
             </div>
           </div>
-        </el-col>
-      </el-row>
+          <div id="smallContainer2">
+            <div id="titleText">
+              <p>AIGC</p>
+            </div>
+            <div style="margin-top: -15px;">
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc1") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc2") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc3") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc4") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc5") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc6") }}</el-tag>
+              <el-tag type="info" style="margin-top: 5px">{{ $t("aigc7") }}</el-tag>
+            </div>
+          </div>
     </div>
-    <div id="container">
-      <div id="titleText">
-        <p>SHA-512:</p>
-      </div>
-      <div id="mainText">
-        <p>
-          2B78A02A01700B4DB73270ABB11EBA27C3132D4CD4359766E61F1D57237E9DE34A5AFED23A9C5F83FACEA29DD245C7BD47091B3F8F03ED7BE0857C5885BF17CC
-        </p>
-      </div>
-    </div>
-    <!-- <div id="container">
-      <div id="titleText">
-        <p>{{ $t("socialAccounts") }}</p>
-      </div>
-      <div id="mainText">
-        <div id="contactText">
-          <el-link
-            :underline="false"
-            href="https://github.com/IveTian"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe691;</span
-            ></el-link
-          >
-          <el-link
-            type="primary"
-            :underline="false"
-            href="https://twitter.com/Ive422"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe652;</span
-            ></el-link
-          >
-          <el-link
-            type="primary"
-            :underline="false"
-            href="https://www.facebook.com/patricktien422/"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe88d;</span
-            ></el-link
-          >
-          <el-link
-            type="danger"
-            :underline="false"
-            href="https://music.163.com/#/user/home?id=491928446"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe601;</span
-            ></el-link
-          >
-          <el-link
-            type="danger"
-            :underline="false"
-            href="https://weibo.com/u/2708379770"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe65a;</span
-            ></el-link
-          >
-          <el-link
-            type="success"
-            :underline="false"
-            href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3MTYyNDM4OQ==#wechat_redirect"
-            target="_blank"
-            ><span class="iconfont" style="font-size: 35px"
-              >&#xe600;</span
-            ></el-link
-          >
-        </div>
-      </div>
-    </div> -->
     <div id="footer">
-      <el-link
-                  type="primary"
-                  :underline="false"
-                  href="mailto:ivetien@outlook.com"
-                  target="_blank"
-                >
-                {{ $t("sendEmail") }}
-                </el-link>
       <p style="font-weight: 800">{{ $t("footerText") }}</p>
-      <el-link
-        type="info"
-        :underline="false"
-        href="https://beian.miit.gov.cn/"
-        target="_blank"
-        style="margin-top: -20px"
-        >{{ $t("ICP") }}</el-link
-      >
     </div>
   </div>
 </template>
@@ -211,7 +85,7 @@ export default {
   },
   methods: {
     changeLang() {
-      this.$i18n.locale = this.$i18n.locale === "en" ? "zh" : "en";
+      this.$i18n.locale = this.$i18n.locale === "zh" ? "en" : "zh";
       if (this.$i18n.locale === "en") {
         this.$message({
           message: "Switched to English",
@@ -223,6 +97,14 @@ export default {
           type: "success",
         });
       }
+    },
+
+    downloadPortfolio(){
+      window.location.href = "https://r2.tzih.art/田梓衡-个人简历.pdf"
+    },
+
+    goPortfolio(){
+      window.location.href = "https://portfolio.tzih.art"
     },
   },
 };
@@ -253,6 +135,21 @@ p {
 h1,
 h2 {
   font-weight: normal;
+}
+
+.btnArea{
+  margin-bottom: 80px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.homeBtn{
+  background-color: rgba(0, 0, 0, 0.075);
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 #changeLangBtn {
@@ -308,13 +205,19 @@ h2 {
   margin: auto;
   margin-top: 20px;
   max-width: 695px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* 横向排列时的间距 */
 }
-#smallContainer {
+#smallContainer1, #smallContainer2 {
   background-color: #ffffff;
   padding: 20px;
   border: solid 2px rgb(247, 247, 247);
   border-radius: 15px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.075);
+  flex: 1; /* 填充所有可用空间 */
+  margin-bottom: 20px; /* 竖向排列时的下方间距 */
 }
 #mainTitleText {
   font-weight: bolder;
@@ -331,5 +234,17 @@ h2 {
   text-align: center;
   color: #b9b9b9;
   margin-bottom: 20px;
+}
+
+@media (max-width: 695px) {
+  #twoCard {
+    flex-direction: column; /* 竖向排列 */
+    gap: 0px;
+  }
+
+  #smallContainer1, #smallContainer2 {
+    flex: none; /* 不再填充可用空间，回到默认宽度 */
+    width: auto; /* 竖向排列时的宽度 */
+  }
 }
 </style>
