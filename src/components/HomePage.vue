@@ -100,11 +100,11 @@ export default {
     },
 
     downloadPortfolio(){
-      window.location.href = "https://r2.tzih.art/田梓衡-个人简历.pdf"
+      window.location.href = "https://api-serv.tzih.top/cdn/田梓衡-个人简历.pdf"
     },
 
     goPortfolio(){
-      window.location.href = "https://portfolio.tzih.art"
+      window.location.href = "https://tzih.art"
     },
   },
 };
@@ -150,6 +150,13 @@ h2 {
   border-radius: 5px;
   font-weight: 600;
   font-size: 16px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+.homeBtn:hover{
+  background-color: rgba(0, 0, 0, 0.932);
+  color: #ffffff;
 }
 
 #changeLangBtn {
