@@ -21,7 +21,7 @@ const i18n = new VueI18n({
       changeLang: 'Change to English',
       resume: '下载简历',
       portfolioOnline: '在线作品集',
-      portfolioDownload: '下载作品集',
+      portfolioDownload: '下载简历',
       helloWord: '您好！👋',
       para1:'嗨，您好，我是田梓衡。',
       para2:'我十分热爱 UI 设计。跃动在屏幕上的符号、优雅的线条几何呈现、创意十足的点线面结合，这便是我所热爱的、所追寻的事物。作为未来发展和个人理想抱负而言，为了更好的理解开发、更好的结合设计与开发，高效输出开发可用的 UI，我还浅显学习使用 React Native 做过 App、使用 Vue + Nuxt 快速搭建网站，作为全栈完成过一个完整的 App 作品。当然，这些都是开源的。',
