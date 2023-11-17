@@ -104,7 +104,7 @@ export default {
     },
 
     goPortfolio(){
-      window.location.href = "https://tzih.art"
+      window.location.href = "https://www.behance.net/patricktien1"
     },
   },
 };
